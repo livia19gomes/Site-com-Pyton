@@ -1,0 +1,21 @@
+<!DOCTYPE html> <!-- Declaração do tipo de documento -->
+<html lang="pt-br" dir="ltr"> <!-- Declaração do idioma da página (inglês) -->
+<head>
+    <meta charset="UTF-8"> <!-- Declaração da codificação de caracteres -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Declaração da viewport para dispositivos móveis -->
+    <title>Verificar fatorial do número</title> <!-- Título da página exibido na aba do navegador -->
+</head>
+<body>
+    <h1>Verificar fatorial do numero</h1> <!-- Título principal da página -->
+    <form action="/fatorial" method="post"> <!-- Formulário para enviar o número para verificação -->
+        <label for="numero">Digite um número:</label> <!-- Rótulo do campo de entrada -->
+        <input type="number" id="numero" name="numero" required> <!-- Campo de entrada para o número -->
+        <button type="submit">Verificar</button> <!-- Botão de envio do formulário -->
+    </form>
+    <div id="resultado">
+        {% if resultado %} <!-- Verifica se há um resultado a ser exibido -->
+            {{ resultado }} <!-- Exibe o resultado da verificação (numero fatorial) -->
+        {% endif %}
+    </div>
+</body>
+</html>
